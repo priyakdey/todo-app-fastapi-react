@@ -1,0 +1,19 @@
+version: '3.9'
+
+services:
+  db:
+    image: postgres:17.4
+    container_name: tododb 
+    shm_size: 128m
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+    volumes:
+      - todo_app_database-v:/var/lib/postgresql/data
+
+volumes:
+  todo_app_database-v:
+
