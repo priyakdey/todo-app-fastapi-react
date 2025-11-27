@@ -2,24 +2,24 @@
 create table profile
 (
     id          serial,
-    username    varchar(20),
-    password    varchar(20),
-    name        varchar(100),
-    created_on  bigint,
-    modified_on bigint,
+    username    varchar(20)  not null unique,
+    password    varchar(20)  not null,
+    name        varchar(100) not null,
+    created_on  bigint       not null,
+    modified_on bigint       not null,
     primary key(id)
 );
 
 
 create table todo
 (
-    id serial,
-    profile_id int,
-    title varchar(50),
-    description text,
-    is_completed boolean,
-    created_on bigint,
-    modified_on bigint,
+    id           serial,
+    profile_id   int,
+    title        varchar(50) not null,
+    description  text,
+    is_completed boolean not null,
+    created_on   bigint not null,
+    modified_on  bigint not null,
     primary key(id),
     constraint fk_profile_id
         foreign key (profile_id)
