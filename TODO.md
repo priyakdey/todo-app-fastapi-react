@@ -1,2 +1,5 @@
-- [ ] Create the needed indexes
-
+- [X] Create the needed indexes
+- [ ] Add middleware for CORS - dont download shit
+- [ ] Add middleware for auth filter
+- [ ] Start with todo apis
+- [ ] How the f do I group them? APIRouter....!

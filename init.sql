@@ -3,7 +3,7 @@ create table profile
 (
     id          serial,
     username    varchar(20)  not null unique,
-    password    varchar(20)  not null,
+    password    varchar(100) not null,
     name        varchar(100) not null,
     created_on  bigint       not null,
     modified_on bigint       not null,

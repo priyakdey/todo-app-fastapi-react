@@ -1,6 +1,7 @@
 import time
 from typing import Optional
 
+from pydantic import BaseModel
 from sqlmodel import SQLModel, Field
 
 
@@ -28,4 +29,3 @@ class Todo(SQLModel, table=True):
     is_completed: bool = Field(nullable=False, default=False)
     created_on: int = Field(nullable=False)
     modified_on: int = Field(nullable=False)
-
